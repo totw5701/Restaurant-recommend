@@ -1,7 +1,6 @@
 package com.example.restaurantrecommend.wishlist.dto;
 
 
-import com.example.restaurantrecommend.db.MemoryDbEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 public class WishListDto {
 
-    private int index;
+    private Integer index;
 
     private String title;                       // 식당이름
     private String category;                    // 카테고리

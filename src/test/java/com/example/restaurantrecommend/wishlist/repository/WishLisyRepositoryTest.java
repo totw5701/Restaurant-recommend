@@ -1,7 +1,6 @@
 package com.example.restaurantrecommend.wishlist.repository;
 
 import com.example.restaurantrecommend.wishlist.entity.WishListEntity;
-import com.example.restaurantrecommend.wishlist.repository.WishListRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +46,7 @@ public class WishLisyRepositoryTest {
         var updated = wishListRepository.save(expected);
 
         Assertions.assertEquals("update test", updated.getTitle());
-        Assertions.assertEquals(1, wishListRepository.listAll().size());
+        Assertions.assertEquals(1, wishListRepository.findAll().size());
     }
 
     @Test
@@ -80,7 +79,7 @@ public class WishLisyRepositoryTest {
         var wishListEntity2 = create();
         wishListRepository.save(wishListEntity2);
 
-        int count = wishListRepository.listAll().size();
+        int count = wishListRepository.findAll().size();
 
         Assertions.assertEquals(2, count);
 
