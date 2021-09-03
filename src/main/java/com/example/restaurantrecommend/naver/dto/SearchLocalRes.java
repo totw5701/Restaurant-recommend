@@ -15,13 +15,14 @@ public class SearchLocalRes {
     private Integer total;
     private Integer start;
     private Integer display;
-    private String category;
+
     private List<SearchLocalItem> items;
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     public static class SearchLocalItem{
+        private String category;
         private String title;
         private String link;
         private String description;
